@@ -6,7 +6,7 @@
  * @param {string} filePath Current file path
  */
 function handleFile(fileResults, fileName, filePath){
-  fileResults.push({ fileName: fileName, filePath: filePath});
+  fileResults.push({ fileName: fileName, filePath: filePath, totalLines: 0});
 }
 
 /**
@@ -17,7 +17,8 @@ function handleFile(fileResults, fileName, filePath){
  * @param {Object} fileResult File result object to store accumulate result data for this file
  */
 function processLine(line, fileResult) {
-  // do something
+  console.log(line);
+  fileResult.totalLines++;
 }
 
 /**

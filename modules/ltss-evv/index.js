@@ -1,10 +1,12 @@
 var DATE_REG_EX = new RegExp(/[0-9]+-[0-9]+-[0-9]+/);
 function handleFile(fileResults, fileName, filePath){
   if (fileName !== 'Warn.log') { return; }
+
+  var dateInFilePath = DATE_REG_EX.exec(filePath);
   fileResults.push({
     fileName: fileName,
     filePath: filePath,
-    date: DATE_REG_EX.exec(filePath).pop(),
+    date: dateInFilePath ? dateInFilePath.pop() : 'null',
     "270": 0,
     "271": 0,
     "837": 0,

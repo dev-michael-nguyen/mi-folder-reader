@@ -1,0 +1,8 @@
+2018-05-01 00:22:33.6569 WARN Acknowledgment download: 303 files are downloaded. Total processing time: 00:27:32.5148400 
+2018-05-01 00:23:33.7700 WARN File Queue: 303 files moved to processing folder. 
+2018-05-01 00:23:37.0992 WARN Acknowledgment Processor: 303 total files, 
+2018-05-01 06:18:29.8232 WARN No 271 reply. System will retry in 10 minutes. Total retry time remain 52 
+2018-05-01 06:28:31.6642 WARN No 271 reply. System will retry in 10 minutes. Total retry time remain 42 
+2018-05-01 06:38:56.4266 WARN EB Response (271) Download: 59 eligibility file is downloaded. Total processing time: 00:28:52.6800293 
+2018-05-01 06:39:57.0594 WARN File Queue: 1235 files moved to processing folder. 
+2018-05-01 06:53:49.7110 WARN 271 Processor:   59 files has been processed. 
