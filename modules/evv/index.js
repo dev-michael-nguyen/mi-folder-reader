@@ -1,7 +1,8 @@
 var DATE_REG_EX = new RegExp(/[0-9]+-[0-9]+-[0-9]+/);
-function handleFile(fileResults, file, filePath){
-  if (file !== 'Warn.log') { return; }
+function handleFile(fileResults, fileName, filePath){
+  if (fileName !== 'Warn.log') { return; }
   fileResults.push({
+    fileName: fileName,
     filePath: filePath,
     date: DATE_REG_EX.exec(filePath).pop(),
     "270": 0,
@@ -32,8 +33,6 @@ function processLine(line, fileResult) {
       code: filter.code,
       files: parseInt(filesCount)
     };
-    // console.log(line);
-    // console.log(stat);
     fileResult[stat.code] += stat.files;
   });
 }

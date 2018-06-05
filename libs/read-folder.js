@@ -1,12 +1,12 @@
 var fs = require('fs');
 
-function walkFolder(dir, handleFile, fileResults) {
+function readFolder(dir, handleFile, fileResults) {
   fileResults = fileResults || [];
   var files = fs.readdirSync(dir);
   files.forEach(function (file) {
     var filePath = (dir + file + '/');
     if (fs.statSync(filePath).isDirectory()) {
-      fileResults = walkFolder(filePath, handleFile, fileResults);
+      fileResults = readFolder(filePath, handleFile, fileResults);
     } else {
       if (handleFile) {
         handleFile(fileResults, file, filePath);
@@ -18,4 +18,4 @@ function walkFolder(dir, handleFile, fileResults) {
   return fileResults;
 }
 
-module.exports = walkFolder;
+module.exports = readFolder;
