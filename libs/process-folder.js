@@ -25,7 +25,7 @@ function processFolder(folderPath, module) {
       // When all files are processed, log final results
       if (processedFiles == fileResults.length){
         console.log('\n');
-        module.logResult(fileResults);
+        module.logFinalResults(fileResults);
       }
     });
   });

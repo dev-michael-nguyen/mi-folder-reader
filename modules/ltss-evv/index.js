@@ -37,8 +37,8 @@ function processLine(line, fileResult) {
   });
 }
 
-function logResult(fileResults){
-  console.log("\nDate, 270 Files Transmitted, 271 Files Received, 837 Files Transmitted, 999 Files Received, 277 Files Received, Payment Extract Files Received");
+function logFinalResults(fileResults){
+  console.log("Date, 270 Files Transmitted, 271 Files Received, 837 Files Transmitted, 999 Files Received, 277 Files Received, Payment Extract Files Received");
   fileResults.forEach(function(r) {
     console.log([r.date, r["270"], r["271"], r["837"], r["999"], r["277"]].join(', '));
   });
@@ -47,5 +47,5 @@ function logResult(fileResults){
 module.exports = {
   handleFile,
   processLine,
-  logResult
+  logFinalResults
 };

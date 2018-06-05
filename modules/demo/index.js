@@ -25,12 +25,12 @@ function processLine(line, fileResult) {
  *
  * @param {*} fileResults Final array of file results after every lines and every files have been processed
  */
-function logResult(fileResults){
+function logFinalResults(fileResults){
   console.log(fileResults);
 }
 
 module.exports = {
   handleFile,
   processLine,
-  logResult
+  logFinalResults
 };

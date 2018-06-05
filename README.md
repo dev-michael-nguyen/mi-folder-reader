@@ -11,12 +11,19 @@ root
 |-modules
 ```
 
-## App Commands
+## Module Implementations
 
+1. Add new module implementation folder under 'modules'.
+2. Add index.js which should implement and export 3 functions. More details and documentations in [Demo](https://github.com/duyl3nguy3n/mi-folder-reader/blob/master/modules/demo/index.js).
+``` javascript
+module.exports = {
+  handleFile,
+  processLine,
+  logFinalResults
+};
+```
+
+3. Run module.
 ``` bash
-# install dependencies
-npm install
-
-# run
 npm start <moduleName> <folderPath>
 ```
