@@ -18,5 +18,5 @@ root
 npm install
 
 # run
-npm start <folderPath>
+npm start <moduleName> <folderPath>
 ```
